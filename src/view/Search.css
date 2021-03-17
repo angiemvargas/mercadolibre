@@ -1,0 +1,22 @@
+.input__buscador{
+    width: 28.9rem;
+    height: 4rem;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: fantasy;
+    line-height: 1.8rem;
+    color: #292730;
+}
+
+.buscador{
+    display: flex;
+    justify-content: center;
+    padding: 10rem;
+}
+
+.button__buscador{
+    width: 9.7rem;
+    left: 1.6rem;
+    align-self: center;
+}

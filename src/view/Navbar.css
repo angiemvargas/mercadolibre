@@ -1,0 +1,16 @@
+.navbar__logo{
+    display: flex;
+    width: 15rem;
+    height: 4rem;
+}
+
+.navbar__nombre{
+    display: flex;
+    font-weight: bold;
+    font-family: fantasy;
+    align-self: center;
+}
+
+.navbar__completa{
+    background-color: #22EEBD;
+}

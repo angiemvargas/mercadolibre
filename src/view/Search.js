@@ -1,20 +1,36 @@
-function Search() {
+import './Search.css'
+import React from 'react'
+
+const Search = () =>{
+
+    const [objeto, setObjeto] = React.useState('');
+
+    const handleObjetoChange = event =>{
+        setObjeto(event.target.value)
+    }
+
     return (
-      <div className="Search">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className="container is-fluid buscador">
+          <div className="field has-addons">
+  
+            <div className="control">
+              <input
+                className="input input__buscador"
+                type="text"
+                value={objeto}
+                placeholder="Buscar.."
+                onChange={handleObjetoChange}
+              />
+            </div>
+          </div>
+  
+          <div className="control button__buscador">
+              <button
+                className="button is-info"
+              >
+                Consultar
+              </button>
+          </div>
       </div>
     );
   }
