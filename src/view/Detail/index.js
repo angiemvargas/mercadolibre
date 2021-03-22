@@ -1,19 +1,16 @@
 import React from 'react'
 import Search from '../Search'
-import Card from '../Card'
-import Logo from '../Logo.png'
+import Result from './Result'
+import ProductContext from '../../context/Product'
 
 const DetailProduct = () =>{
+    const contextProduct = React.useContext(ProductContext)
+
     return(
         <div  className="container is-fluid">
             <div className="dplayout">
             <Search></Search>
-            <Card 
-            image={Logo}
-            nombre="Tarro"
-            precio="5000"
-            vendedor="Angie"
-            ></Card>
+            <Result></Result>
             </div>
         </div>
     )

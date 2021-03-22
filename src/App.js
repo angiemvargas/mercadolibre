@@ -1,18 +1,13 @@
 import React from 'react'
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './view/Navbar'
-import Routes from './Routes'
-import DetailProduct from './view/Detail';
+import Product from './containers/Product'
+import MainLayout from './view/MainLayout'
 
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar></Navbar>
-      <DetailProduct></DetailProduct>
-    </div>
-  );
-}
+const App = () => (
+    <Product>
+      <MainLayout></MainLayout>
+    </Product>
+    );
 
 export default App;

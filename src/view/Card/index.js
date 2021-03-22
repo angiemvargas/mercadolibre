@@ -1,7 +1,7 @@
 import './Card.css'
 import React from 'react'
 
-const Cart = ({onClick, image, nombre, precio, vendedor}) => (
+const Card = ({onClick, image, nombre, precio, vendedor, contenido}) => (
     <div className="tarjeta" onClick={onClick}>
         <div className="tarjeta__imagen">
             <img width="160" height="160" src={image}></img>
@@ -11,7 +11,7 @@ const Cart = ({onClick, image, nombre, precio, vendedor}) => (
             <div className="tarjeta__info--precio">{precio}</div>
             <div className="tarjeta__info--vendedor">{vendedor}</div>
         </div>
-    </div>
+    </div> 
 )
 
-export default Cart;
+export default Card;

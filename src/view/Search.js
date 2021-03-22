@@ -1,12 +1,18 @@
 import './Search.css'
 import React from 'react'
+import ProductContext from '../context/Product'
 
 const Search = () =>{
 
+    const productContext = React.useContext(ProductContext)
     const [objeto, setObjeto] = React.useState('');
 
     const handleObjetoChange = event =>{
         setObjeto(event.target.value)
+    }
+
+    const searchProduct = () => {
+      productContext.actions.callService(objeto)
     }
 
     return (
@@ -26,11 +32,14 @@ const Search = () =>{
   
           <div className="control button__buscador">
               <button
+                type="submit"
                 className="button is-info"
+                onClick={searchProduct}
               >
                 Consultar
               </button>
           </div>
+          
       </div>
     );
   }
