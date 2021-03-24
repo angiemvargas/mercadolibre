@@ -9,10 +9,12 @@ const Search = () =>{
 
     const handleObjetoChange = event =>{
         setObjeto(event.target.value)
+        productContext.actions.changeObjeto(event.target.value)
     }
 
     const searchProduct = () => {
       productContext.actions.callService(objeto)
+
     }
 
     return (
@@ -30,7 +32,6 @@ const Search = () =>{
             </div>
           </div>
   
-          <div className="control button__buscador">
               <button
                 type="submit"
                 className="button is-info"
@@ -38,7 +39,6 @@ const Search = () =>{
               >
                 Consultar
               </button>
-          </div>
           
       </div>
     );

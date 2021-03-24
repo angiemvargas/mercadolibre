@@ -1,0 +1,54 @@
+.product__detail{
+    display: flex;
+    justify-content: center;
+}
+
+.pd__info{
+    align-self: center;
+}
+
+.pd__info--nombre{
+    font-weight: bold;
+    font-family: fantasy;
+    font-size: xx-large;
+    margin-bottom: 40px;
+    width: 30rem;
+}
+
+.pd__info--precio{
+    font-size: xx-large;
+    margin-bottom: 30px;
+}
+
+.pd__info--cantidad{
+    font-family: fantasy;
+}
+
+.pd__info--vendedor{
+    font-family: fantasy;
+    margin-bottom: 30px;
+}
+
+.pd__info--agregar {
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #22EEBD;
+    border-radius: 12px;
+    width: 50%;
+    font-family: fantasy;
+  }
+
+  
+  .pd__info--agregar:hover {
+    background-color: #22EEBD;
+    color: white;
+  }
+
