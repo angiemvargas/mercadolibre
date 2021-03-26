@@ -1,7 +1,6 @@
 import React from 'react'
 import './Product.css'
 import { useParams } from 'react-router-dom'
-import getProductId from '../../getProductId'
 import ProductContext from '../../context/Product'
 
 const ProductDetail = () =>  {
@@ -12,7 +11,6 @@ const ProductDetail = () =>  {
     const list = context.state.result
 
     const getProductId = (id) => {
-        console.log(list.data);
         return list.data.find(product => product.id === id)
     }
 

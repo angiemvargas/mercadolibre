@@ -1,5 +1,5 @@
 import React from 'react'
-import { getListProduct } from '../service/Product'
+import Service from '../service/Product'
 import ProductContext from '../context/Product'
 
 const Product = ({children}) => {
@@ -12,7 +12,21 @@ const Product = ({children}) => {
     }
 
     const callService = object => {
-        getListProduct(objeto).then(data => setResult({data: data}))
+        Service.getListProduct(objeto).then(obj => {
+            
+            const listProduct = obj.map(data => {
+                return {
+                    id: data.id,
+                    nombre: data.title,
+                    imagenPequeña: data.thumbnail,
+                    precio: data.price,
+                    imagenGrande: Service.getBigImage(data.id).then(img => img),
+                    vendedor: Service.getNameSeller(data.seller.id).then(data => data),
+                    cantidad: data.available_quantity
+                }
+            })
+            
+            setResult({data: listProduct})})
     }
 
     return(
