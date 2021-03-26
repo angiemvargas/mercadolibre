@@ -12,12 +12,13 @@ const Search = () =>{
         productContext.actions.changeObjeto(event.target.value)
     }
 
-    const searchProduct = () => {
+    const searchProduct = e => {
+      e.preventDefault()
       productContext.actions.callService(objeto)
-
     }
 
     return (
+      <form onSubmit={searchProduct}>
         <div className="container is-fluid buscador">
           <div className="field has-addons">
   
@@ -35,12 +36,12 @@ const Search = () =>{
               <button
                 type="submit"
                 className="button is-info"
-                onClick={searchProduct}
               >
                 Consultar
               </button>
           
       </div>
+      </form>
     );
   }
   

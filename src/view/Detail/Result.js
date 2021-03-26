@@ -5,11 +5,10 @@ import './Result.css'
 
 const Result = ()=>{
     const contextProduct = React.useContext(ProductContext)
-    let list = []
+    const [list, setList] = React.useState([])
 
     React.useEffect(() => {
-        list = contextProduct.state.result
-        console.log("list", list);
+        setList(contextProduct.state.result)
     }, [contextProduct.state.result])
 
     return(
@@ -19,12 +18,12 @@ const Result = ()=>{
                 {list.data?.map(objeto => (
                     <div className ="resultados tarjeta" key={objeto.id}>
                         <Card
+                            id={objeto.id}
                             image={objeto.imagenPequeña}
                             nombre={objeto.nombre}
                             precio={objeto.precio}
-                            //vendedor="Angie"
+                            object={objeto}
                         />
-                        <h1>holaaaa</h1>
                     </div>
                 ))}
                 </div>

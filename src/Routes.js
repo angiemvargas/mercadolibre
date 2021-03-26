@@ -1,12 +1,18 @@
 import React from 'react'
-import {Route, Switch } from 'react-router-dom'
-import DetailProduct from './view/Detail'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Product from './view/Detail'
+import Detail from './view/Product'
 
 const Routes = () =>{
     return(
-        <Switch>
-            <Route component={DetailProduct}/>
-        </Switch>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Product}>
+            </Route>
+            <Route path="/detail/:id" component={Detail}>
+            </Route>
+          </Switch>
+        </BrowserRouter>
     )
 }
 
